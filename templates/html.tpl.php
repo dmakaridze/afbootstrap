@@ -43,7 +43,9 @@
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html>
+?>
+<?php $af_theme_path = drupal_get_path('theme', 'afbootstrap');?>
+<!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8">
@@ -56,6 +58,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+    <link rel="stylesheet" type="text/css" href="<?php print $af_theme_path;?>/css/slick.css"/>
+     <link rel="stylesheet" type="text/css" href="<?php print $af_theme_path;?>/css/slick-theme.css"/>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -64,5 +68,19 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+
+  <script type="text/javascript" src="<?php print $af_theme_path;?>/js/slick.min.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($){
+    $('.slick-slideshow').slick({
+  infinite: false,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $('.slick-slideshow').slick('setPosition');
+    })
+  });
+  </script>
 </body>
 </html>

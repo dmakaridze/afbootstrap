@@ -35,15 +35,21 @@ function af_print_node($current_nid) {
 			<h3><?php print t("Who we are"); ?></h3>
 			<div class="tabbable tabs-left">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#about" data-toggle="tab"><?php print t( "About");?></a></li>
-					<li><a href="#admin" data-toggle="tab"><?php print t( "Administration");?></a></li>
-					<li><a href="#lectur" data-toggle="tab"><?php print t( "Lecturers");?></a></li>
+					<li class="active"><a href="#about" data-toggle="tab" tab-name="about"><?php print t( "About");?></a></li>
+					<li><a href="#admin" data-toggle="tab"  tab-name="admin"><?php print t( "Administration");?></a></li>
+					<li><a href="#lectur" data-toggle="tab"  tab-name="lectur"><?php print t( "Lecturers");?></a></li>
 				</ul>
 			</div>
 			<div class="tab-content col-md-9">
-				<div class="tab-pane active" id="about"><?php print render($page['about']); ?></div>
+				<div class="tab-pane active" id="about">
+				  <?php $about_block = views_page('front_pages','about_block'); ?>
+				  <?php print $about_block['content'];?>
+				</div>
 				<div class="tab-pane " id="admin">admin</div>
-				<div class="tab-pane " id="lectur">lectur</div>
+				<div class="tab-pane " id="lectur">
+  				  <?php $about_block = views_page('front_pages','lecturers_block'); ?>
+  				  <?php print $about_block['content'];?>
+				</div>
 			</div>
 		</div>
 	</div>
