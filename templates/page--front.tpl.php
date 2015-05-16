@@ -40,8 +40,8 @@ function af_print_node($current_nid) {
 					<li><a href="#lectur" data-toggle="tab"><?php print t( "Lecturers");?></a></li>
 				</ul>
 			</div>
-			<div class="tab-content">
-				<div class="tab-pane active colons" id="about"><?php print render($page['about']); ?></div>
+			<div class="tab-content col-md-9">
+				<div class="tab-pane active" id="about"><?php print render($page['about']); ?></div>
 				<div class="tab-pane " id="admin">admin</div>
 				<div class="tab-pane " id="lectur">lectur</div>
 			</div>
@@ -121,23 +121,3 @@ function af_print_node($current_nid) {
 		</div>
 	</div>
 </div>
-<script>
-jQuery(document).ready(function($){
-$('#myCarousel').carousel({
-  interval: 40000
-});
-$('.carousel .item').each(function() {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-  if (next.next().length > 0) {
-    next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
-
-  } else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
-});
-</script>

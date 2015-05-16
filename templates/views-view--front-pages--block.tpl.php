@@ -28,18 +28,12 @@
  */
 ?>
 <div class="container">
-  <div class="col-md-9">
+  <div class="">
     <?php if ($rows): ?>
-      <div class="carousel slide" id="myCarousel">
-        <div class="carousel-inner">
+      <div class="" id="">
+        <div class="">
           <?php print $rows; ?>
         </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <i class="glyphicon glyphicon-chevron-left"></i>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <i class="glyphicon glyphicon-chevron-right"></i>
-        </a>
       </div>
     <?php endif; ?>
   </div>
