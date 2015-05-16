@@ -1,3 +1,177 @@
 /**
- * Styles for the {{ THEME NAME }} theme.
+ * Styles for the AFBootstrap theme.
  */
+@font-face {
+	font-family: 'g-light';
+	src: url("fonts/GothamRnd-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: 'g-bold';
+	src: url("fonts/GothamRnd-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: N;
+	src: url('fonts/bpg_ingiri_arial.ttf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+#gif {
+	background: url('../images/transp.png') left bottom no-repeat
+		transparent;
+}
+
+#front-menu {
+	margin-top: -50px;
+}
+
+#header {
+	width: 1305px;
+	margin: 0 auto -160px auto;
+	padding: 0;
+	position: relative;
+	background: url('../images/transp.png') left bottom no-repeat
+		transparent;
+}
+
+#language {
+	width: 336px;
+	height: 225px;
+	position: absolute;
+	top: 614px;
+	left: 863px;
+}
+
+#lang-en {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+}
+
+#lang-ka {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+}
+
+.front-links {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+}
+
+#front-link-whoweare {
+	left: 360px;
+	top: 405px;
+	width: 170px;
+	height: 45px;
+}
+
+#front-link-program {
+	left: 630px;
+	top: 400px;
+	width: 170px;
+	height: 45px;
+}
+
+#front-link-gallery {
+	left: 333px;
+	top: 485px;
+	width: 170px;
+	height: 45px;
+}
+
+#front-link-news {
+	left: 582px;
+	top: 508px;
+	width: 113px;
+	height: 45px;
+}
+
+#front-link-howtoapply {
+	left: 363px;
+	top: 560px;
+	width: 170px;
+	height: 45px;
+}
+
+#front-link-contact {
+	left: 712px;
+	top: 560px;
+	width: 170px;
+	height: 45px;
+}
+
+#front-link-students {
+	left: 686px;
+	top: 450px;
+	width: 170px;
+	height: 70px;
+}
+
+#logo {
+	position: absolute;
+	left: 100px;
+	top: 40px
+}
+
+.main-container {
+	background: url('../images/bg_wall.png') center top repeat-y #000;
+	background-attachment: fixed;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #000;
+	color: #FFF;
+	font-size: 11px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
+	{
+	color: #69a500;
+	background: none;
+	border: none;
+}
+
+.nav-tabs>li>a:hover {
+	border: none;
+	background: none;
+	color: #fff
+}
+
+.nav-tabs>li>a {
+	font-size: 1.6em;
+}
+
+a {
+	color: #ccc;
+}
+
+.nav>li>a {
+	padding: 7px 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.navbar-default {
+	background: none;
+	border: none;
+}
+
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+.item:not(.prev) {visibility: visible;}
+.item.right:not(.prev) {visibility: hidden;}
+.rightest{ visibility: visible;}
