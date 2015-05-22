@@ -66,9 +66,11 @@
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
   <?php print $page_top; ?>
+  <a id="top"></a>
   <?php print $page; ?>
+  <div id="footer"></div>
   <?php print $page_bottom; ?>
-
+  <script src="<?php print $af_theme_path;?>/js/animatescroll.min.js"></script>
   <script type="text/javascript" src="<?php print $af_theme_path;?>/js/slick.min.js"></script>
   <script type="text/javascript">
   jQuery(document).ready(function($){
@@ -80,6 +82,20 @@
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       $('.slick-slideshow').slick('setPosition');
     })
+    var br = $.browser;
+    $( ".sidelink" ).click(function() {
+      $('body').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});
+    });
+    $(window).scroll(function() {
+        var top = $(document).scrollTop();
+        if (top > 400) {
+          $(".sidebtn").css({bottom: '0', position: 'fixed', right: '0'});
+          $(".sidelink").css({bottom: '0', position: 'fixed', right: '0'});
+        } else {
+          $(".sidebtn").css({bottom: '-300px', position: 'fixed', right: '0'});
+          $(".sidelink").css({bottom: '0', position: 'fixed', right: '0'});
+        }
+    });
   });
   </script>
 </body>
